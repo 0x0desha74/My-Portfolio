@@ -14,6 +14,8 @@ import ParticleBackground from "@/components/particle-background"
 export default function Home() {
   const isMobile = useMobile()
   const [activeSection, setActiveSection] = useState("home")
+  const [sending, setSending] = useState(false)
+  const [formStatus, setFormStatus] = useState<string | null>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -1028,7 +1030,36 @@ export default function Home() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <form className="space-y-4">
+                    <form
+                      className="space-y-4"
+                      onSubmit={async (e) => {
+                        e.preventDefault();
+                        setSending(true);
+                        setFormStatus(null);
+                        const form = e.target as HTMLFormElement;
+                        const name = (form.elements.namedItem('name') as HTMLInputElement).value;
+                        const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+                        const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value;
+                        try {
+                          const res = await fetch('/api/contact', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ name, email, message })
+                          });
+                          if (res.ok) {
+                            setFormStatus('Message sent successfully!');
+                            form.reset();
+                          } else {
+                            const data = await res.json();
+                            setFormStatus(data.error || 'Failed to send message.');
+                          }
+                        } catch (err) {
+                          setFormStatus('Failed to send message.');
+                        } finally {
+                          setSending(false);
+                        }
+                      }}
+                    >
                       <div className="grid grid-cols-1 gap-4">
                         <div className="space-y-2">
                           <label htmlFor="name" className="text-sm font-medium text-slate-300">
@@ -1063,10 +1094,13 @@ export default function Home() {
                           ></textarea>
                         </div>
                       </div>
-                      <Button type="submit" className="w-full bg-purple-600 hover:bg-purple-700 text-white">
-                        Send Message
+                      <Button type="submit" className="w-full bg-purple-600 hover:bg-purple-700 text-white" disabled={sending}>
+                        {sending ? 'Sending...' : 'Send Message'}
                       </Button>
                     </form>
+                    {formStatus && (
+                      <div className={`mt-2 text-center text-sm ${formStatus.includes('success') ? 'text-green-400' : 'text-red-400'}`}>{formStatus}</div>
+                    )}
                   </CardContent>
                 </Card>
               </motion.div>
