@@ -52,6 +52,8 @@ export default function Home() {
     show: { opacity: 1, y: 0 },
   }
 
+  const apiKey = process.env.RESEND_API_KEY;
+
   return (
     <div className="min-h-screen bg-[#0a0a0f] text-slate-200">
       <ParticleBackground />
