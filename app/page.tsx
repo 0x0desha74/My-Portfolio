@@ -175,7 +175,7 @@ export default function Home() {
                     asChild
                     className="border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800"
                   >
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/0x0desha74" target="_blank" rel="noopener noreferrer">
                       <Github className="mr-2 h-4 w-4" /> GitHub
                     </a>
                   </Button>
@@ -184,7 +184,7 @@ export default function Home() {
                     asChild
                     className="border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800"
                   >
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/0x0desha74" target="_blank" rel="noopener noreferrer">
                       <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
                     </a>
                   </Button>
@@ -586,8 +586,11 @@ export default function Home() {
                             variant="outline"
                             size="sm"
                             className="border-purple-500/30 text-purple-300 hover:bg-purple-500/10"
+                            asChild
                           >
-                            <ExternalLink className="mr-2 h-4 w-4" /> View Project
+                            <a href="https://github.com/0x0desha74/Talabat.API" target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="mr-2 h-4 w-4" /> View Project
+                            </a>
                           </Button>
                         </CardFooter>
                       </div>
@@ -659,8 +662,11 @@ export default function Home() {
                             variant="outline"
                             size="sm"
                             className="border-indigo-500/30 text-indigo-300 hover:bg-indigo-500/10"
+                            asChild
                           >
-                            <ExternalLink className="mr-2 h-4 w-4" /> View Project
+                            <a href="https://github.com/0x0desha74/Library-Management-System" target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="mr-2 h-4 w-4" /> View Project
+                            </a>
                           </Button>
                         </CardFooter>
                       </div>
@@ -735,8 +741,11 @@ export default function Home() {
                             variant="outline"
                             size="sm"
                             className="border-cyan-500/30 text-cyan-300 hover:bg-cyan-500/10"
+                            asChild
                           >
-                            <ExternalLink className="mr-2 h-4 w-4" /> View Project
+                            <a href="https://github.com/0x0desha74/Employees-Management-System" target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="mr-2 h-4 w-4" /> View Project
+                            </a>
                           </Button>
                         </CardFooter>
                       </div>
@@ -812,8 +821,11 @@ export default function Home() {
                             variant="outline"
                             size="sm"
                             className="border-pink-500/30 text-pink-300 hover:bg-pink-500/10"
+                            asChild
                           >
-                            <ExternalLink className="mr-2 h-4 w-4" /> View Project
+                            <a href="https://github.com/0x0desha74/GameZone" target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="mr-2 h-4 w-4" /> View Project
+                            </a>
                           </Button>
                         </CardFooter>
                       </div>
@@ -980,22 +992,41 @@ export default function Home() {
                           variant="outline"
                           size="icon"
                           className="rounded-full border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 hover:border-purple-500/50"
+                          asChild
                         >
-                          <Github className="h-5 w-5" />
+                          <a href="https://github.com/0x0desha74" target="_blank" rel="noopener noreferrer">
+                            <Github className="h-5 w-5" />
+                          </a>
                         </Button>
                         <Button
                           variant="outline"
                           size="icon"
                           className="rounded-full border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 hover:border-purple-500/50"
+                          asChild
                         >
-                          <Linkedin className="h-5 w-5" />
+                          <a href="https://www.linkedin.com/in/0x0desha74" target="_blank" rel="noopener noreferrer">
+                            <Linkedin className="h-5 w-5" />
+                          </a>
                         </Button>
                         <Button
                           variant="outline"
                           size="icon"
                           className="rounded-full border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 hover:border-purple-500/50"
+                          asChild
                         >
-                          <Mail className="h-5 w-5" />
+                          <a href="https://github.com/0x0desha74" target="_blank" rel="noopener noreferrer">
+                            <Github className="h-5 w-5" />
+                          </a>
+                        </Button>
+                        <Button
+                          variant="outline"
+                          size="icon"
+                          className="rounded-full border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 hover:border-purple-500/50"
+                          asChild
+                        >
+                          <a href="https://www.linkedin.com/in/0x0desha74" target="_blank" rel="noopener noreferrer">
+                            <Linkedin className="h-5 w-5" />
+                          </a>
                         </Button>
                       </div>
                     </div>
