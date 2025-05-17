@@ -1008,26 +1008,6 @@ export default function Home() {
                             <Linkedin className="h-5 w-5" />
                           </a>
                         </Button>
-                        <Button
-                          variant="outline"
-                          size="icon"
-                          className="rounded-full border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 hover:border-purple-500/50"
-                          asChild
-                        >
-                          <a href="https://github.com/0x0desha74" target="_blank" rel="noopener noreferrer">
-                            <Github className="h-5 w-5" />
-                          </a>
-                        </Button>
-                        <Button
-                          variant="outline"
-                          size="icon"
-                          className="rounded-full border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 hover:border-purple-500/50"
-                          asChild
-                        >
-                          <a href="https://www.linkedin.com/in/0x0desha74" target="_blank" rel="noopener noreferrer">
-                            <Linkedin className="h-5 w-5" />
-                          </a>
-                        </Button>
                       </div>
                     </div>
                   </CardContent>
